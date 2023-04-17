@@ -25,6 +25,16 @@ body{
   background-color: #d385f1;
 }
 
+.task-item {
+height: 130px;
+}
+
+.task-item p {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
 .container{
   margin: 0 auto;
   max-width: 80.0rem;

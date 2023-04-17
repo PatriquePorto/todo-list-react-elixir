@@ -35,7 +35,7 @@ export function TaskItem({id, description, completed, deleteItem, completeItem, 
                 <button onClick={() => handleEdit(id)} className="button">
                     Edit
                 </button>
-
+                <hr className="my-12" />
             </div>
     </div>
     )
