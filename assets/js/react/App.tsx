@@ -9,12 +9,12 @@ interface AppProps {
 }
 const App: React.FC<AppProps> = (props: AppProps) => {
   const [tasks, setTasks] = useState({})
-  
+
   return (
     <div className="title">
-      
+
         <Title
-          title="Todo List with: Phoenix + Typescript + React"
+          title="Todo List with: Elixir + Typescript + React"
           subtitle="What do you have to do today?"
           />
           <TaskForm setTasks={setTasks} />

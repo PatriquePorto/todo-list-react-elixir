@@ -6,15 +6,19 @@ interface TaskItemInterface {
     completed: boolean
     deleteItem: (id: number) => void
     completeItem: (id: number) => void
+    editItem: (id: number) => void
 }
 
-export function TaskItem({id, description, completed, deleteItem, completeItem}: TaskItemInterface) {
-    
+export function TaskItem({id, description, completed, deleteItem, completeItem, editItem}: TaskItemInterface) {
+
     const handleDelete = async (id) => {
         deleteItem(id);
     }
     const handleComplete = async (id) => {
         completeItem(id);
+    }
+    const handleEdit = async (id) => {
+        editItem(id);
     }
     return (
     <div className="task-item">
@@ -28,6 +32,10 @@ export function TaskItem({id, description, completed, deleteItem, completeItem}:
                 <button onClick={() => handleDelete(id)} className="button">
                     Remove
                 </button>
+                <button onClick={() => handleEdit(id)} className="button">
+                    Edit
+                </button>
+
             </div>
     </div>
     )

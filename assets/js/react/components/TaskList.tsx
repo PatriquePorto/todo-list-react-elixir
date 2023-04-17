@@ -37,10 +37,14 @@ export  function TaskList({tasks, setTasks}) {
             body: JSON.stringify({id: id, task: { completed: true}})
         };
 
+
+
         const responseUpdate = await fetch(
             `http://localhost:4000/api/tasks/${id}`,
             requestOptions
         );
+
+
 
         const response = await fetch(
             "http://localhost:4000/api/tasks"
